@@ -29,7 +29,6 @@ router.setState = function (fromState, toState, entry_idx, journalToRemove) {
   } else if (fromState == "journal" && toState == "single-entry") {
     // console.log("journal to single-entry");
     history.pushState({ page: "entry"+entry_idx }, "entry"+entry_idx, "#entry"+entry_idx);
-    // body.setAttribute("class", toState);
     document.querySelector("h1").textContent = "Entry "+entry_idx;
   } else if (fromState == "single-entry" && toState == "journal") {
     // console.log("single-entry to journal");
