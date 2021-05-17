@@ -88,6 +88,7 @@ class JournalEntry extends HTMLElement {
 
     return entryObj;
   }
+  
 
   set entry(entry) {
     this.shadowRoot.querySelector('.entry-title').innerText = entry.title;
@@ -112,6 +113,7 @@ class JournalEntry extends HTMLElement {
 }
 
 customElements.define('journal-entry', JournalEntry);
+
 
 /**
  * JSON Format:
